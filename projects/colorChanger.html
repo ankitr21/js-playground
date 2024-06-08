@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer</title>
+    <style>
+        .box{
+          height: 50px;
+          width: 50px;
+          display: inline-block;
+        }
+        .headding{
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .colbox{
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="colbox">
+        <h1 class="heading">Background color Switcher</h1>
+        <div class='box', id = "yellow", style="background-color: yellow;"></div>
+        <div class='box', id = "green", style="background-color: green;"></div>
+        <div class='box', id = "red", style="background-color: red;"></div>
+        <div class='box', id = "blue", style="background-color: blue;"></div>
+        <h2 class="heading">Click on your favourite color to Change the background</h2>
+    </div>
+    <script>
+        const colors = document.querySelectorAll('.box')
+        const body = document.querySelector("body")
+
+        colors.forEach(color => {
+            color.addEventListener('click', function(event){
+                if(event.target.id === "yellow"){
+                    body.style.backgroundColor = event.target.id;
+                }
+                if(event.target.id === "green"){
+                    body.style.backgroundColor = event.target.id;
+                }
+                if(event.target.id === "red"){
+                    body.style.backgroundColor = event.target.id;
+                }
+                if(event.target.id === "blue"){
+                    body.style.backgroundColor = event.target.id;
+                }
+            })
+        });
+    </script>
+</body>
+</html>
